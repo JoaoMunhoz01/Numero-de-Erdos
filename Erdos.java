@@ -45,22 +45,6 @@ public class Erdos{
         this.flag++;
         }
     }
-    /*
-    //METODO PARA TRATAR NULLS;
-    public void tratNull(){
-        for(int i = 0; i < this.b; i++){
-            for(int j = 0; j < 10; j++){
-                if(autores[i][j]==null){
-                    autores[i][j] = new Autor("");
-                }
-            }
-        }
-        for(int i = 0; i < ordem.length; i++){
-            if(ordem[i]==null){
-                ordem[i] = new Autor("aaaaa");
-            }
-        }
-    }*/
 
     //METODO PARA INICIALIZAR O NÚMERO DE ERDOS DE CADA autores;
     public void iniNumErdos(){
@@ -125,41 +109,6 @@ public class Erdos{
             }
         }//fim for
     }  
-    /*public void autorSemRep(){
-        int cont = 0;
-        for(int i = 0; i < b; i++){
-            for(int j = 0; j < 10; j++){
-                cont = 0;
-                
-                for(int k = 0; k < ordem.length; k++){
-                    if(autores[i][j].getNome().equals(ordem[k].getNome())){
-                        cont++;
-                    }
-                    if(cont < 0){
-                       ordem[k]= autores[i][j];
-                    }                                        
-                }
-            }
-        }
-    }
-    public void ordenacao(){
-        int comp = 0;
-        Autor aux = new Autor("");
-		for(int i = 0; i< ordem.length; i++){
-			for(int j = 0; j< ordem.length; j++){
-                if(!ordem[i].getNome().equals("aaaaa")){
-                    comp = ordem[i].getNome().substring(3).compareTo(ordem[j].getNome().substring(3));
-                    if(comp < 0){
-                        aux = ordem[i];
-                        ordem[i] = ordem[j];
-                        ordem[j] = aux;	
-                    }
-                }
-            }
-		}
-	}*/
-    
-
     public void sincronizaAutor(Autor autor){
         for (int i = 0; i < b; i++) {
             for (int j = 0; j < 10; j++) {
@@ -171,22 +120,6 @@ public class Erdos{
             }
         }
     }//fim metodo
-    
-
-    /*public void print(){
-        ordenacao();
-        for(int i = 0; i < ordem.length;i++){
-            if(!ordem[i].getNome().equals("aaaaa")){
-                System.out.print(ordem[i].getNome()+": ");
-                if(ordem[i].getNumErdos() < 500){
-                    System.out.println(ordem[i].getNumErdos()+" ");
-                }
-                else{
-                    System.out.println("infinito ");
-                }
-            }
-        }
-    }*/
     public void print(){
         for(int i = 0; i < this.b;i++){
             
